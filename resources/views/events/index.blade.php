@@ -11,5 +11,9 @@
     @foreach($events as $event)
     <a href="{{ route('event_show', ['id' => $event->id]) }}">{{ $event->title }}</a>
     @endforeach
+
+    <div>
+        <a href="{{ route('image.upload') }}">Add new image</a>
+    </div>
 </body>
 </html>

@@ -18,3 +18,6 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/events', 'EventController@index')->name('home')->middleware('auth');
 Route::get('/events/{id}', 'EventController@show')->name('event_show')->middleware('auth');
 Route::put('/events/update', 'EventController@update')->name('update_event')->middleware('auth');
+
+Route::get('/new-image', 'ImageUploadController@imageUpload')->name('image.upload')->middleware('auth');
+Route::post('/image-upload', 'ImageUploadController@imageUploadPost')->name('image.upload.post')->middleware('auth');
