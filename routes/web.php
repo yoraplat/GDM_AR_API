@@ -20,4 +20,5 @@ Route::get('/events/{id}', 'EventController@show')->name('event_show')->middlewa
 Route::put('/events/update', 'EventController@update')->name('update_event')->middleware('auth');
 
 Route::get('/new-image', 'ImageUploadController@imageUpload')->name('image.upload')->middleware('auth');
+Route::delete('/delete-image', 'ImageUploadController@deleteImage')->name('delete.image')->middleware('auth');
 Route::post('/image-upload', 'ImageUploadController@imageUploadPost')->name('image.upload.post')->middleware('auth');

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class ImageUploadController extends Controller
 {
@@ -22,6 +24,17 @@ class ImageUploadController extends Controller
     }
 
     public function imageUpload() {
-        return view('images.index');
+
+        $images = Storage::files("public/images");
+        return view('images.index', ['images' => $images]);
+    }
+
+    public function deleteImage(Request $request) {
+        $filename = $request->input('filename');
+
+        // dd($filename);
+        Storage::delete($filename);
+
+        return redirect()->back();
     }
 }

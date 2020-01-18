@@ -12,5 +12,18 @@
                 <br>
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
+
+<h2>Delete images</h2>
+
+@foreach($images as $image)
+<form action="{{ route('delete.image') }}" method="POST">
+{{ csrf_field() }}
+    <input type="hidden" name="filename" value="{{ $image }}">
+    @method('delete')
     
+    <button>Delete {{ basename($image) }}</button>
+    <!-- <option value="{{ URL::asset('storage/images/' . basename($image)) }}">{{ basename($image) }}</option> -->
+</form>
+@endforeach
 @endsection
+    
