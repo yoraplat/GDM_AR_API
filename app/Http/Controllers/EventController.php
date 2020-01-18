@@ -28,8 +28,8 @@ class EventController extends Controller
         // dd($request);
 
         $validator = Validator::make($request->all(), [
-            'title' => 'required|max:55',
-            'description' => 'required|max:255',
+            'title' => 'required|max:35',
+            'description' => 'required|max:200',
             'image_url' => 'required',
             // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);

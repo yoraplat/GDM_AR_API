@@ -5,10 +5,14 @@
     <form action="{{ route('update_event') }}" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="_method" value="PUT">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
+    <small>(Max length = 35 characters)</small>
+    <br>
         <input type="hidden" name="id" value="{{ $event->id }}">
         <label for="title">Title:</label>
         <input type="text" name="title" value="{{ $event->title }}">
         <br>
+    <small>(Max length = 200 characters)</small>
+    <br>
         <label for="description">Description:</label>
         <input type="text" name="description" value="{{ $event->description }}">
         <br>
