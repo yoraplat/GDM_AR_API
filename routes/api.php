@@ -17,6 +17,6 @@ Use App\Api;
 Route::get('events', 'ApiController@index');
 Route::get('events/{id}', 'ApiController@show');
 
-Route::post('events', 'ApiController@store');
-Route::put('events/{id}', 'ApiController@update');
+// Route::post('events', 'ApiController@store');
+// Route::put('events/{id}', 'ApiController@update');
 // Route::delete('Api/{id}', 'ApiController@delete');

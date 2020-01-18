@@ -26,5 +26,19 @@ class EventSeeder extends Seeder
             'image_url' => 'https://via.placeholder.com/150',
             // 'password' => Hash::make('password'),
         ]);
+        
+        DB::table('events')->insert([
+            'title' => 'Event 3',
+            'description' => 'Description for event 3',
+            'image_url' => 'https://via.placeholder.com/150',
+            // 'password' => Hash::make('password'),
+        ]);
+        
+        DB::table('events')->insert([
+            'title' => 'Event 4',
+            'description' => 'Description for event 4',
+            'image_url' => 'https://via.placeholder.com/150',
+            // 'password' => Hash::make('password'),
+        ]);
     }
 }
