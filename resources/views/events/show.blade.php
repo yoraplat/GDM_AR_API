@@ -18,7 +18,7 @@
     </div>
     <div class="form-group">
         <label for="image_url">Select image:</label>
-            <select class="form-control" name="image_url">
+            <select multiple class="form-control" name="image_url">
             @foreach($images as $image)
             @if ($event->image_url == URL::asset('storage/images/' . basename($image)))
             <option  selected value="{{ URL::asset('storage/images/' . basename($image)) }}">{{ basename($image) }}</option>

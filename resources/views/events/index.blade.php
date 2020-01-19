@@ -19,9 +19,9 @@
        </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-sm">
-        <a class="btn btn-primary" href="{{ route('image.upload') }}">Add new image<i class="icon-space fa fa-plus-square"></i></a>
+        <a class="btn btn-primary" href="{{ route('image.upload') }}">Add new image<i class="icon-space fa fa-plus-square px-2"></i></a>
         </div>
     </div>
 
