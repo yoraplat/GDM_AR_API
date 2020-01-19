@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         <label for="description">Description:</label>
-        <textarea class="form-control" rows="3" type="text" name="description" value="{{ $event->description }}"></textarea>
+        <textarea class="form-control" rows="3" type="text" name="description" >{{ $event->description }}</textarea>
     </div>
     <div class="form-group">
         <label for="image_url">Select image:</label>
