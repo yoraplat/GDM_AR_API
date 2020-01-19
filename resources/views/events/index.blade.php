@@ -21,8 +21,7 @@
 
     <div class="row">
         <div class="col-sm">
-        <p>Add new image</p>
-        <a href="{{ route('image.upload') }}"></a>
+        <a class="btn btn-primary" href="{{ route('image.upload') }}">Add new image<i class="icon-space fa fa-plus-square"></i></a>
         </div>
     </div>
 
