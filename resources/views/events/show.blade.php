@@ -12,7 +12,7 @@
         <label for="description">Description:</label>
         <input type="text" name="description" value="{{ $event->description }}">
         <br>
-         
+
         <label for="image_url">Select image:</label>
 
         <select name="image_url">
@@ -38,5 +38,5 @@
 
 <br>
 
-    
+
 @endsection

@@ -1,19 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>TEST</h1>
-    @foreach($events as $event)
-    <a href="{{ route('event_show', ['id' => $event->id]) }}">{{ $event->title }}</a>
-    @endforeach
-
-    <div>
-        <a href="{{ route('image.upload') }}">Add new image</a>
+@extends('layouts.app')
+@section('content')
+    <div class="row">
+        <div class="col-sm">
+        <h1>List of events</h1>
+        </div>
     </div>
-</body>
-</html>
+    <div class="row">
+       <div class="col-sm">
+            <ul class="list-group">
+                 @foreach($events as $event)
+                <li class="list-group-item">
+                    <p> {{ $event->title }}</p>
+                    <a href="{{ route('event_show', ['id' => $event->id]) }}"><i class="fa fa-edit"></i></a>
+                    <a href="{{ route('event_delete', ['id' => $event->id]) }}"><i class="fa fa-trash"></i></a>
+                </li>
+                @endforeach
+            </ul>
+       </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+        <p>Add new image</p>
+        <a href="{{ route('image.upload') }}"></a>
+        </div>
+    </div>
+
+@endsection
