@@ -14,7 +14,8 @@
     <small>(Max length = 200 characters)</small>
     <br>
         <label for="description">Description:</label>
-        <input type="text" name="description" value="{{ $event->description }}">
+        <textarea name="description" id="" cols="30" rows="10">{{ $event->description }}</textarea>
+        <!-- <input type="text" name="description" value="{{ $event->description }}"> -->
         <br>
          
         <label for="image_url">Select image:</label>

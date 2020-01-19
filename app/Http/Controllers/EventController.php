@@ -42,7 +42,7 @@ class EventController extends Controller
                         ->withErrors($validator)
                         ->withInput();
         } else {
-            
+            // dd($request->input('description'));
             $event->update($request->all());
             // dd($event);
             return redirect()->route('event_show', ['id' => $id]);
